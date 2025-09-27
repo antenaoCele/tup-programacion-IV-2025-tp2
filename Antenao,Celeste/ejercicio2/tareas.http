@@ -1,0 +1,37 @@
+@url=http://localhost:5000
+
+### Listado de tareas
+GET {{url}}/tareas
+
+### Listado de tareas completadas
+GET http://localhost:5000/tareas?completada=true
+
+### Listado de tareas sin completar
+GET http://localhost:5000/tareas?completada=false
+
+
+### Obtener por id
+GET {{url}}/tareas/5
+
+
+### Crear tarea
+POST {{url}}/tareas
+Content-Type: application/json
+
+{
+    "nombre": "aaaaaaaa",
+    "completada": true
+}
+
+
+### Modificar tarea
+PUT {{url}}/tareas/5
+Content-Type: application/json
+
+{
+    "nombre": "bañarme",
+    "completada": false
+}
+
+### Eliminar tarea
+DELETE {{url}}/tareas/1
