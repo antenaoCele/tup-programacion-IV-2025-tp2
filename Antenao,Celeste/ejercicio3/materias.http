@@ -1,0 +1,28 @@
+@url=http://localhost:6000
+
+### Listado de materias
+GET {{url}}/materias
+
+
+### buscar materia por id
+GET {{url}}/materias/15
+
+### Cargar materia
+POST {{url}}/materias
+Content-Type: application/json
+
+{
+    "nombre": "Metodologia"
+}
+
+
+### Modificar materia
+PUT {{url}}/materias/2
+Content-Type: application/json
+
+{
+    "nombre": "Base de datos"
+}
+
+### Eliminar materia
+DELETE {{url}}/materias/6

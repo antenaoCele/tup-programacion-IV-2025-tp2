@@ -1,0 +1,36 @@
+@url=http://localhost:6000
+
+### Listado de alumnos
+GET {{url}}/alumnos
+
+
+### buscar alumnos por id
+GET {{url}}/alumnos/2
+
+### Cargar alumno
+POST {{url}}/alumnos
+Content-Type: application/json
+
+{
+    "nombre": "Cele",
+    "nota1": 10, 
+    "nota2": 10, 
+    "nota3": 8,
+    "id_materias": 2
+}
+
+
+### Modificar alumno
+PUT {{url}}/alumnos/2
+Content-Type: application/json
+
+{
+    "nombre": "Celeste Antenao",
+    "nota1": 8, 
+    "nota2": 9, 
+    "nota3": 8,
+    "id_materias": 4
+}
+
+### Eliminar alumno
+DELETE {{url}}/alumnos/9
